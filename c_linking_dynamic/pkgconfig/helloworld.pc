@@ -1,0 +1,12 @@
+prefix=$GOPATH/src/github.com/alessandrozucca/linking_c_to_go/c_linking_dynamic
+exec_prefix=${prefix}
+libdir=${exec_prefix}/dylib
+includedir=${prefix}/dylib
+libname=helloworld
+
+Name: helloworld
+Description: helloworld
+Version: 1.0
+Requires:
+Libs: -L${libdir} -l${libname}
+Cflags: -I${includedir}
